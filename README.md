@@ -26,11 +26,13 @@ the project focuses on semantic chunking using Chroma DB. Reviews are parsed and
 
 Clone the repository:
 ```bash
+git clone https://github.com/your-username/Beauty-Product-Recommender.git
+cd Beauty-Product-Recommender
 
 ```
 
 Install the dependencies:
 ```bash
-
+pip install -r requirements.txt
 ```
 
