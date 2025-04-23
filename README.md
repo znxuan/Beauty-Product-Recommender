@@ -12,7 +12,7 @@ The process includes analyzing product reviews, identifying pros and cons, senti
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![LLM](https://img.shields.io/badge/LLM-(Large_Language_Models)-orange?style=for-the-badge&logo=python&logoColor=white)
 ![RaG](https://img.shields.io/badge/RaG-(Retrieval_Augmented_Generation)-red?style=for-the-badge&logo=python&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-black?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-green?style=for-the-badge&logo=python&logoColor=white)
 ![Chroma](https://img.shields.io/badge/Chroma_DB-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-yellow?style=for-the-badge&logo=streamlit&logoColor=white)
 
