@@ -10,13 +10,7 @@ from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEndpoint
 load_in_4bit=True
 
-# Initialize Semantic Chunker with percentile threshold
 hf_embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/paraphrase-MiniLM-L3-v2")
-# text_splitter = SemanticChunker(
-#     hf_embeddings,
-#     breakpoint_threshold_type="percentile"  # Smart dynamic chunking
-# )
-# Load Chroma DB only
 vectordb = Chroma(persist_directory="chromadb_reviews", embedding_function=hf_embeddings)
 retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={"k": 10})
 
@@ -60,7 +54,6 @@ Answer:
 """
 )
 
-
 qa_chain = RetrievalQA.from_chain_type(
     llm=llm,
     retriever=retriever,
@@ -89,20 +82,3 @@ if query:
                 st.markdown(f"**{i+1}. {doc.metadata.get('product')}**")
                 st.caption(f"⭐ {doc.metadata.get('average_rating')} | 💬 {doc.metadata.get('rating_number')}")
                 st.write(doc.page_content[:300] + "...")
-
-        # seen_products = set()
-
-        # with st.expander("🔍 View Source Chunks"):
-        #     for i, doc in enumerate(response["source_documents"]):
-        #         product = doc.metadata.get('product')
-        #         if product in seen_products:
-        #             continue
-        #         seen_products.add(product)
-
-        #         st.markdown(f"**{i+1}. {product}**")
-        #         st.caption(f"⭐ {doc.metadata.get('average_rating')} | 💬 {doc.metadata.get('rating_number')}")
-        #         st.write(doc.page_content[:300] + "...")
-        #         st.code({
-        #             "metadata": doc.metadata,
-        #             "page_content_preview": doc.page_content[:100]
-        #         })
