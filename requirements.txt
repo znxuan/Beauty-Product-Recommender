@@ -1,0 +1,8 @@
+langchain==0.3.24
+langchain_chroma==0.2.3
+langchain_community==0.3.22
+langchain_experimental==0.3.4
+langchain_huggingface==0.1.2
+streamlit==1.43.2
+tqdm==4.67.1
+transformers==4.50.2
